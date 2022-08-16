@@ -19,9 +19,9 @@ function DeleteToDo({ todo, setTodos }) {
       color="error"
       size="small"
       onClick={handleDeleteTodo}
-      style={{ marginLeft: 10 }}
+      style={{ marginTop: 2 }}
     >
-      Remove
+      Done
     </Button>
   );
 }
