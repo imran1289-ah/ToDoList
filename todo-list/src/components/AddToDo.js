@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
 function AddToDo({ setTodos }) {
   function handleSubmit(event) {
@@ -21,7 +22,16 @@ function AddToDo({ setTodos }) {
     <div>
       <form onSubmit={handleSubmit}>
         <input name="newitem" placeholder="Add Item" id="newitem"></input>
-        <button type="submit">Add</button>
+        {/* <button type="submit">Add</button> */}
+        <Button
+          variant="contained"
+          color="success"
+          size="small"
+          style={{ marginLeft: 10 }}
+          type="submit"
+        >
+          Remove
+        </Button>
       </form>
     </div>
   );

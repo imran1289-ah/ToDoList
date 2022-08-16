@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteToDo from "./DeleteToDo";
+import "../ToDoList.css";
 
 //Object destructuring to pass the todos array to ToDoList component
 function ToDoList({ todos, setTodos }) {
@@ -12,15 +13,17 @@ function ToDoList({ todos, setTodos }) {
 
   return (
     <div>
-      <ul>
+      <ul id="list">
         {todos.map((todo) => (
           <li
-            onDoubleClick={() => handleToggleTodo(todo)}
+            // onDoubleClick={() => handleToggleTodo(todo)}
             style={{ textDecoration: todo.completed ? "line-through" : "" }}
             key={todo.id}
           >
             {todo.description}
             <DeleteToDo todo={todo} setTodos={setTodos}></DeleteToDo>
+            <br></br>
+            <br></br>
           </li>
         ))}
       </ul>

@@ -1,4 +1,7 @@
 import React from "react";
+import Button from "@mui/material/Button";
+
+const label = { inputProps: {} };
 
 function DeleteToDo({ todo, setTodos }) {
   function handleDeleteTodo() {
@@ -11,10 +14,15 @@ function DeleteToDo({ todo, setTodos }) {
   }
 
   return (
-    <button
+    <Button
+      variant="contained"
+      color="error"
+      size="small"
       onClick={handleDeleteTodo}
-      style={{ color: "red", marginLeft: 10, height: "15px", width: "10px" }}
-    ></button>
+      style={{ marginLeft: 10 }}
+    >
+      Remove
+    </Button>
   );
 }
 
